@@ -59,12 +59,20 @@ document.querySelector("#safe-location-value").addEventListener('click', (e) => 
 
 
 //init google map
-
-
-
 function initMap() {
     let map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: -34.397, lng: 150.644 },
         zoom: 8,
     })
 }
+
+//get country list
+async function getData() {
+    try {
+        const countriesFromSource = await axios.get('https://restcountries.eu/rest/v2/all')
+        console.log(countriesFromSource.data)
+    }catch(err) {
+        console.error(err);
+    }
+}
+getData()
