@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Location viewer</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIDJXDV9l30wgXUT3AWdKlxXjQueSQZQw&callback=initMap&libraries=&v=weekly" async defer></script>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <form>
@@ -14,5 +16,7 @@
         <button id="safe-location-value">add</button>
     </form>
     <div id='location-graph'></div>
+
+    <div id="map"></div>
 </body>
 </html>
